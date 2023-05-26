@@ -1,23 +1,8 @@
 import Head from 'next/head'
-import { useEffect, useState, memo } from 'react'
+import { memo } from 'react'
 import { Container } from '../components/Container'
-import { Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
-import {
-  ExclamationCircleIcon,
-  LinkIcon,
-  MenuAlt2Icon,
-  XIcon,
-} from '@heroicons/react/outline'
-import {
-  XMarkIcon,
-  BookOpenIcon,
-  ChartPieIcon,
-  ComputerDesktopIcon,
-} from '@heroicons/react/solid'
-import { Disclosure } from '@headlessui/react'
 import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
+import useAudio from '../hooks/useAudio'
 
 const linksData = [
   {
@@ -156,6 +141,14 @@ const ProjectLink = memo(({ href, text }) => {
 })
 
 export default function Home() {
+  const [playing, toggle] = useAudio('/wombat.mp3')
+
+  const toggleMusic = (e) => {
+    e.preventDefault()
+    // @ts-ignore
+    toggle()
+  }
+
   return (
     <>
       <Head>
@@ -229,6 +222,26 @@ export default function Home() {
                       href="https://chordcraft.io"
                       text="AI Chord Generator"
                     />
+                  </p>
+                </div>
+
+                <div className={playing ? 'animate-pulse pt-4' : 'pt-4'}>
+                  <h2 className="mt-2  text-left text-2xl font-extrabold text-gray-700">
+                    <span className={playing ? 'text-[#1763fd] block' : 'block'}>
+                      /vibe
+                    </span>
+                  </h2>
+                  <p
+                    onClick={toggleMusic}
+                    className=" mx-auto mt-4 cursor-pointer text-left text-lg text-gray-600 sm:max-w-3xl"
+                  >
+                    &gt; Adhesive Wombat - 8 Bit Adventure
+                    <button className={playing ? 'animate-bounce' : ''}>
+                      <img
+                        src={playing ? '/sound_on.png' : '/sound_off.png'}
+                        className=" ml-3 mr-4 inline-flex h-8 w-8 -translate-y-0.5   grayscale "
+                      />
+                    </button>
                   </p>
                 </div>
               </div>
