@@ -208,7 +208,7 @@ export default function Home() {
                     &gt; Galleon DAO -{' '}
                     <ProjectLink
                       href="https://twitter.com/galleondao"
-                      text="Founder"
+                      text="Decentralised Organisation"
                     />
                     <br />
                     &gt; Cursed Pirates -{' '}
