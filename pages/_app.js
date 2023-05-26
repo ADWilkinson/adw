@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Andrew Wilkinson | Web3/Crypto & AI</title>
+        <title>ADW | Web3/Crypto & AI</title>
         <meta name="title" content="Andrew Wilkinson: Web3/Crypto & AI" />
         <meta
           name="description"
