@@ -102,7 +102,6 @@ const socialLinksData = [
   },
 ]
 
-
 const CardLink = memo(({ href, imgSrc, title, description }) => (
   <Link href={href} target="_blank">
     <div className="pt-6">
@@ -144,6 +143,18 @@ const IconLink = memo(({ href, svgIcon, title }) => (
   </Link>
 ))
 
+const ProjectLink = memo(({ href, text }) => {
+  return (
+    <a
+      className="text-[#1763fd] underline underline-offset-4"
+      target="_blank"
+      href={href}
+    >
+      {text}
+    </a>
+  )
+})
+
 export default function Home() {
   return (
     <>
@@ -155,15 +166,17 @@ export default function Home() {
           <div className="relative isolate px-6  lg:px-8">
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
               <div className="text-center">
-                <h1 className="text-3xl font-extrabold text-gray-700">
-                  <span className="block">Andrew Wilkinson</span>
+                <h1 className="text-left text-2xl font-extrabold text-gray-700">
+                  <span className="block">/adw</span>
                 </h1>
-                <p className="mx-auto mt-2 max-w-lg text-xl text-gray-600 sm:max-w-3xl">
-                  I am an ex-founder crypto evangelist, builder & investor.
+                <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
+                  &gt; I am a crypto founder, builder, investor & evangelist.
                 </p>
-
+                <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
+                  <span className="block">/links</span>
+                </h2>
                 <div className="">
-                  <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-2">
                     {linksData.map((link, index) => (
                       <CardLink
                         key={index}
@@ -175,7 +188,7 @@ export default function Home() {
                     ))}
                   </div>
 
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="grid grid-cols-1 gap-0 pt-4 sm:grid-cols-2 sm:gap-4 sm:pt-0 lg:grid-cols-4">
                     {socialLinksData.map((link, index) => (
                       <IconLink
                         key={index}
@@ -185,6 +198,38 @@ export default function Home() {
                       />
                     ))}
                   </div>
+                </div>
+
+                <div className="pt-4">
+                  <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
+                    <span className="block">/projects</span>
+                  </h2>
+                  <p className="mx-auto mt-4 text-left text-lg text-gray-600 sm:max-w-3xl">
+                    &gt; Galleon DAO -{' '}
+                    <ProjectLink
+                      href="https://twitter.com/galleondao"
+                      text="Founder"
+                    />
+                    <br />
+                    &gt; Cursed Pirates -{' '}
+                    <ProjectLink
+                      href="https://twitter.com/cursedpirates"
+                      text="NFT Collection"
+                    />
+                  </p>
+                  <p className="mx-auto text-left text-lg text-gray-600 sm:max-w-3xl">
+                    &gt; Royal Fortune Studios -{' '}
+                    <ProjectLink
+                      href="https://twitter.com/RoyalFortune0x"
+                      text="Music NFTs"
+                    />
+                    <br />
+                    &gt; ChordCraft -{' '}
+                    <ProjectLink
+                      href="https://chordcraft.io"
+                      text="AI Chord Generator"
+                    />
+                  </p>
                 </div>
               </div>
             </div>
