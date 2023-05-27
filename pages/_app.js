@@ -9,11 +9,11 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ADW | Web3/Crypto & AI</title>
-        <meta name="title" content="Andrew Wilkinson: Web3/Crypto & AI" />
+        <title>ADW | Tech, Crypto & AI</title>
+        <meta name="title" content="ADW: Tech, Crypto & AI" />
         <meta
           name="description"
-          content="Investing, Building & Consulting within Web3/Crypto & AI."
+          content="Investing, Building & Consulting within Tech, Crypto & AI."
         />
       </Head>
       <Component {...pageProps} />

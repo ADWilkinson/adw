@@ -9,7 +9,7 @@ const linksData = [
     href: 'https://galleon.ventures',
     imgSrc: './logo-profile.png',
     title: 'Galleon Ventures',
-    description: 'Web3/Crypto Consulting',
+    description: 'Tech & Crypto Consulting',
   },
   {
     href: 'https://blackflag.ventures',
@@ -163,7 +163,7 @@ export default function Home() {
                   <span className="block">/adw</span>
                 </h1>
                 <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
-                  &gt; I am a crypto founder, builder, investor & evangelist.
+                  &gt; I am a tech founder, builder, investor & evangelist.
                 </p>
                 <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
                   <span className="block">/links</span>
@@ -197,7 +197,7 @@ export default function Home() {
                   <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
                     <span className="block">/projects</span>
                   </h2>
-                  <p className="mx-auto mt-4 text-left text-lg text-gray-600 sm:max-w-3xl">
+                  <p className="text-md mx-auto mt-4 text-left text-gray-600 sm:max-w-3xl sm:text-lg">
                     &gt; Galleon DAO -{' '}
                     <ProjectLink
                       href="https://twitter.com/galleondao"
@@ -210,7 +210,7 @@ export default function Home() {
                       text="NFT Collection"
                     />
                   </p>
-                  <p className="mx-auto text-left text-lg text-gray-600 sm:max-w-3xl">
+                  <p className="text-md mx-auto text-left text-gray-600 sm:max-w-3xl sm:text-lg">
                     &gt; Royal Fortune Studios -{' '}
                     <ProjectLink
                       href="https://twitter.com/RoyalFortune0x"
@@ -227,13 +227,15 @@ export default function Home() {
 
                 <div className={playing ? 'animate-pulse pt-4' : 'pt-4'}>
                   <h2 className="mt-2  text-left text-2xl font-extrabold text-gray-700">
-                    <span className={playing ? 'text-[#1763fd] block' : 'block'}>
+                    <span
+                      className={playing ? 'block text-[#1763fd]' : 'block'}
+                    >
                       /vibe
                     </span>
                   </h2>
                   <p
                     onClick={toggleMusic}
-                    className=" mx-auto mt-4 cursor-pointer text-left text-lg text-gray-600 sm:max-w-3xl"
+                    className=" text-md mx-auto mt-4 cursor-pointer text-left text-gray-600 sm:max-w-3xl sm:text-lg"
                   >
                     &gt; Adhesive Wombat - 8 Bit Adventure
                     <button className={playing ? 'animate-bounce' : ''}>
