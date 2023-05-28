@@ -163,7 +163,7 @@ export default function Home() {
                   <span className="block">/adw</span>
                 </h1>
                 <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
-                  &gt; I am a tech founder, builder, investor & evangelist.
+                  &gt; Tech founder, software engineer, investor & evangelist.
                 </p>
                 <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
                   <span className="block">/links</span>
@@ -201,7 +201,7 @@ export default function Home() {
                     &gt; Galleon DAO -{' '}
                     <ProjectLink
                       href="https://twitter.com/galleondao"
-                      text="Decentralised Organisation"
+                      text="DeFi Organisation"
                     />
                     <br />
                     &gt; Cursed Pirates -{' '}
@@ -238,7 +238,11 @@ export default function Home() {
                     className=" text-md mx-auto mt-4 cursor-pointer text-left text-gray-600 sm:max-w-3xl sm:text-lg"
                   >
                     &gt; Adhesive Wombat - 8 Bit Adventure
-                    <button className={playing ? 'animate-bounce' : ''}>
+                    <button
+                      className={
+                        playing ? 'mt-2 animate-bounce md:mt-0' : 'mt-2 md:mt-0'
+                      }
+                    >
                       <img
                         src={playing ? '/sound_on.png' : '/sound_off.png'}
                         className=" ml-3 mr-4 inline-flex h-8 w-8 -translate-y-0.5   grayscale "
