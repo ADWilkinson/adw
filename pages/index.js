@@ -209,8 +209,7 @@ export default function Home() {
                       href="https://twitter.com/cursedpirates"
                       text="NFT Collection"
                     />
-                  </p>
-                  <p className="text-md mx-auto text-left text-gray-600 sm:max-w-3xl sm:text-lg">
+                    <br />
                     &gt; Royal Fortune Studios -{' '}
                     <ProjectLink
                       href="https://twitter.com/RoyalFortune0x"
@@ -221,6 +220,12 @@ export default function Home() {
                     <ProjectLink
                       href="https://chordcraft.io"
                       text="AI Chord Generator"
+                    />
+                    <br />
+                    &gt; TradingView -{' '}
+                    <ProjectLink
+                      href="https://www.tradingview.com/u/Tradespot/#published-scripts"
+                      text="Indicators"
                     />
                   </p>
                 </div>
