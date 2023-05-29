@@ -222,10 +222,10 @@ export default function Home() {
                       text="AI Chord Generator"
                     />
                     <br />
-                    &gt; TradingView -{' '}
+                    &gt; Technical Analysis Scripts -{' '}
                     <ProjectLink
                       href="https://www.tradingview.com/u/Tradespot/#published-scripts"
-                      text="Indicators"
+                      text="TradingView"
                     />
                   </p>
                 </div>
