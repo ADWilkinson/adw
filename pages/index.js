@@ -227,6 +227,12 @@ export default function Home() {
                       href="https://www.tradingview.com/u/Tradespot/#published-scripts"
                       text="TradingView"
                     />
+                    <br />
+                    &gt; Cursed Fund -{' '}
+                    <ProjectLink
+                      href="https://www.cursed.fund"
+                      text="Trading Experiments"
+                    />
                   </p>
                 </div>
 
