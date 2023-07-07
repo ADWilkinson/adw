@@ -209,12 +209,18 @@ export default function Home() {
                   <span className="block">/about</span>
                 </h1>
                 <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
-                  &gt; Andrew Wilkinson
-                  <br></br>
                   &gt; Working within tech/crypto, software engineering &
                   investing.
                   <br></br>
                   &gt; Enjoyer of writing, travel, music production & gaming.
+                  <br></br>
+                  &gt;{' '}
+                  <a
+                    className="text-[#1763fd]"
+                    href="mailto:hello@andrewwilkinson.me"
+                  >
+                    hello@andrewwilkinson.me
+                  </a>
                 </p>
                 <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
                   <span className="block">/work</span>
