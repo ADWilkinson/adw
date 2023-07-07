@@ -209,6 +209,8 @@ export default function Home() {
                   <span className="block">/adw</span>
                 </h1>
                 <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
+                  &gt; Andrew Wilkinson
+                  <br></br>
                   &gt; Working within tech/crypto, software engineering &
                   investing.
                   <br></br>
