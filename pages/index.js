@@ -67,7 +67,7 @@ const socialLinksData = [
     ),
   },
   {
-    href: 'https://medium.com/@andrew-eth',
+    href: 'https://blog.andrewwilkinson.me/',
     title: 'Medium',
     svgIcon: (
       <svg
