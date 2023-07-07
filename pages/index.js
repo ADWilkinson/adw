@@ -287,7 +287,7 @@ export default function Home() {
                     &gt; TradingView Scripts -{' '}
                     <ProjectLink
                       href="https://www.tradingview.com/u/Tradespot/#published-scripts"
-                      text="Technical indicators"
+                      text="Indicators"
                     />
                     <br />
                     &gt; Cursed Fund -{' '}
