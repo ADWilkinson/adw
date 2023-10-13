@@ -120,7 +120,7 @@ const socialLinksData = [
 
 const CardLink = memo(({ href, imgSrc, title, description }) => (
   // <Link href={href} target="_blank">
-  <div className="pt-6">
+  <div className="pt-0">
     {/* <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 pb-6 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]"> */}
     <div className="pt-6">
       <div>
@@ -193,7 +193,7 @@ export default function Home() {
                 <h1 className="text-left text-2xl font-extrabold text-gray-700">
                   <span className="block">contact</span>
                 </h1>
-                <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
+                <p className="mx-auto mt-2  text-left text-lg text-gray-600 sm:max-w-3xl">
                   <a
                     className="text-[#1763fd]"
                     href="mailto:hello@andrewwilkinson.me"
@@ -221,8 +221,8 @@ export default function Home() {
                 <h2 className="mt-6 text-left text-2xl font-extrabold text-gray-700">
                   <span className="block">links</span>
                 </h2>
-                <div className="pt-6">
-                  <div className="grid grid-cols-1 gap-0 pt-4 sm:grid-cols-2 sm:gap-2 sm:pt-0 lg:grid-cols-3">
+                <div className="pt-2">
+                  <div className="grid grid-cols-1 gap-0  sm:grid-cols-2 sm:gap-2 sm:pt-2 lg:grid-cols-3">
                     {socialLinksData.map((link, index) => (
                       <IconLink
                         key={index}
@@ -238,7 +238,7 @@ export default function Home() {
                   <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
                     <span className="block">projects</span>
                   </h2>
-                  <p className="text-md mx-auto mt-4 text-left text-gray-600 sm:max-w-3xl sm:text-lg">
+                  <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl sm:text-lg">
                     &gt; Galleon DAO -{' '}
                     <ProjectLink
                       href="https://twitter.com/galleondao"
@@ -287,7 +287,7 @@ export default function Home() {
                   </h2>
                   <p
                     onClick={toggleMusic}
-                    className=" text-md mx-auto mt-4 cursor-pointer text-left text-gray-600 sm:max-w-3xl sm:text-lg"
+                    className=" text-md mx-auto mt-2 cursor-pointer text-left text-gray-600 sm:max-w-3xl sm:text-lg"
                   >
                     &gt; Adhesive Wombat - 8 Bit Adventure
                     <button
