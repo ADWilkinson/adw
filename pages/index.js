@@ -8,7 +8,7 @@ const linksData = [
   {
     href: 'https://galleon.ventures',
     imgSrc: './logo-profile.png',
-    title: 'Galleon Ventures',
+    title: 'Galleon',
     description: 'Tech & crypto consulting',
   },
   {
@@ -134,15 +134,15 @@ const socialLinksData = [
 ]
 
 const CardLink = memo(({ href, imgSrc, title, description }) => (
-  <Link href={href} target="_blank">
+  // <Link href={href} target="_blank">
     <div className="pt-6">
-      <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 pb-6 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]">
+      {/* <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 pb-6 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]"> */}
         <div className="pt-6">
           <div>
             <span className="inline-flex items-center justify-center">
               <div className="mx-auto w-auto justify-center text-center">
                 <img
-                  className="mx-auto inline-flex h-16 w-auto justify-center rounded-full text-center ring-1 ring-black grayscale sm:h-16"
+                  className="mx-auto inline-flex h-16 w-auto justify-center rounded-sm text-center ring-1 ring-black grayscale sm:h-16"
                   src={imgSrc}
                   alt=""
                 />
@@ -155,13 +155,13 @@ const CardLink = memo(({ href, imgSrc, title, description }) => (
           <p className="mt-1 text-base text-gray-600">{description}</p>
         </div>
       </div>
-    </div>
-  </Link>
+    // </div>
+  // </Link>
 ))
 
 const IconLink = memo(({ href, svgIcon, title }) => (
   <Link href={href} target="_blank">
-    <div className="pt-6">
+    <div className="mt-4 md:mt-0">
       <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 py-2 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]">
         <div className="flex">
           {svgIcon}
@@ -206,15 +206,10 @@ export default function Home() {
             <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
               <div className="text-center">
                 <h1 className="text-left text-2xl font-extrabold text-gray-700">
-                  <span className="block">/about</span>
+                  <span className="block">contact</span>
                 </h1>
                 <p className="mx-auto mt-4  text-left text-lg text-gray-600 sm:max-w-3xl">
-                  &gt; Working within tech/crypto, software engineering &
-                  investing.
-                  <br></br>
-                  &gt; Enjoyer of writing, travel, music production & gaming.
-                  <br></br>
-                  &gt;{' '}
+           
                   <a
                     className="text-[#1763fd]"
                     href="mailto:hello@andrewwilkinson.me"
@@ -223,7 +218,7 @@ export default function Home() {
                   </a>
                 </p>
                 <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
-                  <span className="block">/work</span>
+                  <span className="block">work</span>
                 </h2>
                 <div className="">
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-2">
@@ -239,10 +234,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h2 className="mt-8 text-left text-2xl font-extrabold text-gray-700">
-                  <span className="block">/links</span>
+                <h2 className="mt-6 text-left text-2xl font-extrabold text-gray-700">
+                  <span className="block">links</span>
                 </h2>
-                <div className="">
+                <div className="pt-6">
                   <div className="grid grid-cols-1 gap-0 pt-4 sm:grid-cols-2 sm:gap-4 sm:pt-0 lg:grid-cols-4">
                     {socialLinksData.map((link, index) => (
                       <IconLink
@@ -257,7 +252,7 @@ export default function Home() {
 
                 <div className="pt-4">
                   <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
-                    <span className="block">/projects</span>
+                    <span className="block">projects</span>
                   </h2>
                   <p className="text-md mx-auto mt-4 text-left text-gray-600 sm:max-w-3xl sm:text-lg">
                     &gt; Galleon DAO -{' '}
@@ -303,7 +298,7 @@ export default function Home() {
                     <span
                       className={playing ? 'block text-[#1763fd]' : 'block'}
                     >
-                      /vibe
+                      vibe
                     </span>
                   </h2>
                   <p
