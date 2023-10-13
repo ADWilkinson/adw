@@ -120,27 +120,27 @@ const socialLinksData = [
 
 const CardLink = memo(({ href, imgSrc, title, description }) => (
   // <Link href={href} target="_blank">
+  <div className="pt-6">
+    {/* <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 pb-6 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]"> */}
     <div className="pt-6">
-      {/* <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 pb-6 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]"> */}
-        <div className="pt-6">
-          <div>
-            <span className="inline-flex items-center justify-center">
-              <div className="mx-auto w-auto justify-center text-center">
-                <img
-                  className="mx-auto inline-flex h-16 w-auto justify-center rounded-sm text-center ring-1 ring-black grayscale sm:h-16"
-                  src={imgSrc}
-                  alt=""
-                />
-              </div>
-            </span>
+      <div>
+        <span className="inline-flex items-center justify-center">
+          <div className="mx-auto w-auto justify-center text-center">
+            <img
+              className="mx-auto inline-flex  h-24 w-auto justify-center rounded-sm border border-[#aeb3bc] bg-gray-50  text-center shadow-[3px_3px_0px_#153c8a]  ring-black grayscale hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a] sm:h-24"
+              src={imgSrc}
+              alt=""
+            />
           </div>
-          <h3 className="mt-4 text-lg font-semibold tracking-tight text-gray-700">
-            {title}
-          </h3>
-          <p className="mt-1 text-base text-gray-600">{description}</p>
-        </div>
+        </span>
       </div>
-    // </div>
+      <h3 className="mt-4 text-lg font-semibold tracking-tight text-gray-700">
+        {title}
+      </h3>
+      <p className="mt-1 text-base text-gray-600">{description}</p>
+    </div>
+  </div>
+  // </div>
   // </Link>
 ))
 
