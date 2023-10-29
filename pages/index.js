@@ -259,7 +259,7 @@ export default function Home() {
                     <br />
                     &gt; ChordCraft -{' '}
                     <ProjectLink
-                      href="https://chordcraft.io"
+                      href="https://github.com/ADWilkinson/chordcraft"
                       text="AI chord progressions"
                     />
                     <br />
@@ -271,8 +271,8 @@ export default function Home() {
                     <br />
                     &gt; Cursed Fund -{' '}
                     <ProjectLink
-                      href="https://www.cursed.fund"
-                      text="Trading experiments"
+                      href="https://github.com/ADWilkinson/cursed-fund"
+                      text="Web3 trading experiments"
                     />
                   </p>
                 </div>
