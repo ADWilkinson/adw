@@ -239,37 +239,37 @@ export default function Home() {
                     <span className="block">projects</span>
                   </h2>
                   <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl">
-                    Galleon DAO: <br></br>
+                    Galleon DAO<br></br>
                     <ProjectLink
                       href="https://twitter.com/galleondao"
                       text="DeFi organisation (founder)"
                     />
                     <br />
-                    Cursed Pirates: <br></br>
+                    Cursed Pirates<br></br>
                     <ProjectLink
                       href="https://twitter.com/cursedpirates"
                       text="Avatar NFT collection"
                     />
                     <br />
-                    Royal Fortune Studios: <br></br>
+                    Royal Fortune Studios<br></br>
                     <ProjectLink
                       href="https://twitter.com/RoyalFortune0x"
                       text="Music NFTs"
                     />
                     <br />
-                    ChordCraft: <br></br>
+                    ChordCraft<br></br>
                     <ProjectLink
                       href="https://github.com/ADWilkinson/chordcraft"
                       text="AI chord progressions"
                     />
                     <br />
-                    TradingView Scripts: <br></br>
+                    TradingView Scripts<br></br>
                     <ProjectLink
                       href="https://www.tradingview.com/u/Tradespot/#published-scripts"
                       text="Free chart indicators"
                     />
                     <br />
-                    Cursed Fund: <br></br>
+                    Cursed Fund<br></br>
                     <ProjectLink
                       href="https://github.com/ADWilkinson/cursed-fund"
                       text="Web3 trading experiments"
