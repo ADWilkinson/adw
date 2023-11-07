@@ -27,7 +27,7 @@ const socialLinksData = [
       <svg
         fill="currentColor"
         viewBox="0 0 30 30"
-        className="h-6 w-6 translate-y-0.5"
+        className="h-5 w-5 translate-y-0.5"
         aria-hidden="true"
       >
         <path d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"></path>
@@ -41,7 +41,7 @@ const socialLinksData = [
       <svg
         fill="currentColor"
         viewBox="0 0 24 24"
-        className="h-6 w-6 translate-y-0.5"
+        className="h-5 w-5 translate-y-0.5"
         aria-hidden="true"
       >
         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
@@ -55,7 +55,7 @@ const socialLinksData = [
       <svg
         fill="currentColor"
         viewBox="0 0 24 24"
-        className="h-6 w-6 translate-y-0.5"
+        className="h-5 w-5 translate-y-0.5"
         aria-hidden="true"
       >
         <path
@@ -72,7 +72,7 @@ const socialLinksData = [
     svgIcon: (
       <svg
         fill="currentColor"
-        className="h-6 w-6 translate-y-0.5"
+        className="h-5 w-5 translate-y-0.5"
         aria-hidden="true"
         viewBox="0 -55 256 256"
       >
@@ -91,7 +91,7 @@ const socialLinksData = [
     svgIcon: (
       <svg
         fill="currentColor"
-        className="h-6 w-6 translate-y-0.5"
+        className="h-5 w-5 translate-y-0.5"
         aria-hidden="true"
         viewBox="0 0 24 24"
       >
@@ -105,7 +105,7 @@ const socialLinksData = [
     svgIcon: (
       <svg
         fill="currentColor"
-        className="h-6 w-6 translate-y-0.5"
+        className="h-5 w-5 translate-y-0.5"
         aria-hidden="true"
         viewBox="0 0 192 192"
       >
@@ -134,10 +134,10 @@ const CardLink = memo(({ href, imgSrc, title, description }) => (
           </div>
         </span>
       </div>
-      <h3 className="mt-4 text-lg font-semibold tracking-tight text-gray-700">
+      <h3 className="mt-4 text-md font-semibold tracking-tight text-gray-700">
         {title}
       </h3>
-      <p className="mt-1 text-base text-gray-600">{description}</p>
+      <p className="mt-1 text-sm text-gray-600">{description}</p>
     </div>
   </div>
   // </div>
@@ -147,10 +147,10 @@ const CardLink = memo(({ href, imgSrc, title, description }) => (
 const IconLink = memo(({ href, svgIcon, title }) => (
   <Link href={href} target="_blank">
     <div className="mt-4 md:mt-0">
-      <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 py-2 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]">
+      <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 py-1.5 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]">
         <div className="flex">
           {svgIcon}
-          <h3 className="ml-2 text-lg font-semibold tracking-tight text-gray-700">
+          <h3 className="ml-2 text-md font-semibold tracking-tight text-gray-700">
             {title}
           </h3>
         </div>
@@ -162,11 +162,11 @@ const IconLink = memo(({ href, svgIcon, title }) => (
 const ProjectLink = memo(({ href, text }) => {
   return (
     <a
-      className="text-[#1763fd] underline underline-offset-4"
+      className="text-[#1763fd]  text-sm ml-2"
       target="_blank"
       href={href}
     >
-      {text}
+      &gt; {text}
     </a>
   )
 })
@@ -187,13 +187,13 @@ export default function Home() {
       </Head>
       <div className="pb-12 sm:pb-4 ">
         <Container>
-          <div className="relative isolate px-6  lg:px-8">
-            <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-              <div className="text-center">
-                <h1 className="text-left text-2xl font-extrabold text-gray-700">
+          <div className="relative isolate  lg:px-8 ">
+            <div className="mx-auto max-w-2xl py-8 sm:py-32 ">
+              <div className="rounded-sm   text-center border border-[#aeb3bc] sm:p-8 p-4 shadow-[3px_3px_0px_#153c8a]">
+                <h1 className="text-left text-lg font-extrabold text-gray-700 ">
                   <span className="block">contact</span>
                 </h1>
-                <p className="mx-auto mt-2  text-left text-lg text-gray-600 sm:max-w-3xl">
+                <p className="text-md mx-auto  mt-2 text-left text-gray-600 sm:max-w-3xl">
                   <a
                     className="text-[#1763fd]"
                     href="mailto:hello@andrewwilkinson.me"
@@ -201,7 +201,7 @@ export default function Home() {
                     hello@andrewwilkinson.me
                   </a>
                 </p>
-                <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
+                <h2 className="text-left text-lg font-extrabold text-gray-700 mt-2 border-t border-[#aeb3bc] pt-2">
                   <span className="block">work</span>
                 </h2>
                 <div className="">
@@ -218,10 +218,10 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h2 className="mt-6 text-left text-2xl font-extrabold text-gray-700">
+                <h2 className="text-left text-lg font-extrabold text-gray-700 mt-4 border-t border-[#aeb3bc] pt-2">
                   <span className="block">links</span>
                 </h2>
-                <div className="pt-2">
+                <div className="sm:pt-2">
                   <div className="grid grid-cols-1 gap-0  sm:grid-cols-2 sm:gap-2 sm:pt-2 lg:grid-cols-3">
                     {socialLinksData.map((link, index) => (
                       <IconLink
@@ -235,41 +235,41 @@ export default function Home() {
                 </div>
 
                 <div className="pt-4">
-                  <h2 className="mt-4 text-left text-2xl font-extrabold text-gray-700">
+                  <h2 className="text-left text-lg font-extrabold text-gray-700 mt-2 border-t border-[#aeb3bc] pt-2">
                     <span className="block">projects</span>
                   </h2>
-                  <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl sm:text-lg">
-                    &gt; Galleon DAO -{' '}
+                  <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl">
+                    Galleon DAO: <br></br>
                     <ProjectLink
                       href="https://twitter.com/galleondao"
-                      text="DeFi org (founder)"
+                      text="DeFi organisation (founder)"
                     />
                     <br />
-                    &gt; Cursed Pirates -{' '}
+                    Cursed Pirates: <br></br>
                     <ProjectLink
                       href="https://twitter.com/cursedpirates"
-                      text="NFT collection"
+                      text="Avatar NFT collection"
                     />
                     <br />
-                    &gt; Royal Fortune Studios -{' '}
+                    Royal Fortune Studios: <br></br>
                     <ProjectLink
                       href="https://twitter.com/RoyalFortune0x"
                       text="Music NFTs"
                     />
                     <br />
-                    &gt; ChordCraft -{' '}
+                    ChordCraft: <br></br>
                     <ProjectLink
                       href="https://github.com/ADWilkinson/chordcraft"
                       text="AI chord progressions"
                     />
                     <br />
-                    &gt; TradingView Scripts -{' '}
+                    TradingView Scripts: <br></br>
                     <ProjectLink
                       href="https://www.tradingview.com/u/Tradespot/#published-scripts"
-                      text="Indicators"
+                      text="Free chart indicators"
                     />
                     <br />
-                    &gt; Cursed Fund -{' '}
+                    Cursed Fund: <br></br>
                     <ProjectLink
                       href="https://github.com/ADWilkinson/cursed-fund"
                       text="Web3 trading experiments"
@@ -278,7 +278,7 @@ export default function Home() {
                 </div>
 
                 <div className={playing ? 'animate-pulse pt-4' : 'pt-4'}>
-                  <h2 className="mt-2  text-left text-2xl font-extrabold text-gray-700">
+                  <h2 className="text-left text-lg font-extrabold text-gray-700 mt-2 border-t border-[#aeb3bc] pt-2">
                     <span
                       className={playing ? 'block text-[#1763fd]' : 'block'}
                     >
@@ -287,9 +287,9 @@ export default function Home() {
                   </h2>
                   <p
                     onClick={toggleMusic}
-                    className=" text-md mx-auto mt-2 cursor-pointer text-left text-gray-600 sm:max-w-3xl sm:text-lg"
+                    className=" text-md mx-auto mt-1 cursor-pointer text-left text-gray-600 hover:text-[#1763fd]"
                   >
-                    &gt; Adhesive Wombat - 8 Bit Adventure
+                    Adhesive Wombat - 8 Bit Adventure
                     <button
                       className={
                         playing ? 'mt-2 animate-bounce md:mt-0' : 'mt-2 md:mt-0'
@@ -297,7 +297,7 @@ export default function Home() {
                     >
                       <img
                         src={playing ? '/sound_on.png' : '/sound_off.png'}
-                        className=" ml-3 mr-4 inline-flex h-8 w-8 -translate-y-0.5   grayscale "
+                        className=" ml-1.5 mr-4 inline-flex h-5 w-5 -translate-y-0.5   grayscale "
                       />
                     </button>
                   </p>
