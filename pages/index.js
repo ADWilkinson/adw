@@ -189,7 +189,7 @@ export default function Home() {
         <Container>
           <div className="relative isolate  lg:px-8 ">
             <div className="mx-auto max-w-2xl py-8 sm:py-32 ">
-              <div className="rounded-sm   text-center border border-[#aeb3bc] sm:p-8 p-4 shadow-[3px_3px_0px_#153c8a]">
+              <div className="rounded-sm   border border-[#aeb3bc] p-4 text-center shadow-[3px_3px_0px_#153c8a] sm:p-8">
                 <h1 className="text-left text-lg font-extrabold text-gray-700 ">
                   <span className="block">contact</span>
                 </h1>
@@ -201,7 +201,7 @@ export default function Home() {
                     hello@andrewwilkinson.me
                   </a>
                 </p>
-                <h2 className="text-left text-lg font-extrabold text-gray-700 mt-2 border-t border-[#aeb3bc] pt-2">
+                <h2 className="mt-2 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
                   <span className="block">work</span>
                 </h2>
                 <div className="">
@@ -218,7 +218,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <h2 className="text-left text-lg font-extrabold text-gray-700 mt-4 border-t border-[#aeb3bc] pt-2">
+                <h2 className="mt-4 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
                   <span className="block">links</span>
                 </h2>
                 <div className="sm:pt-2">
@@ -235,7 +235,7 @@ export default function Home() {
                 </div>
 
                 <div className="pt-4">
-                  <h2 className="text-left text-lg font-extrabold text-gray-700 mt-2 border-t border-[#aeb3bc] pt-2">
+                  <h2 className="mt-2 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
                     <span className="block">projects</span>
                   </h2>
                   <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl">
@@ -274,11 +274,17 @@ export default function Home() {
                       href="https://github.com/ADWilkinson/cursed-fund"
                       text="Web3 trading experiments"
                     />
+                    <br />
+                    Ultra Sound Apps<br></br>
+                    <ProjectLink
+                      href="https://ultrasoundapps.com"
+                      text="Crypto apps homepage"
+                    />
                   </p>
                 </div>
 
                 <div className={playing ? 'animate-pulse pt-4' : 'pt-4'}>
-                  <h2 className="text-left text-lg font-extrabold text-gray-700 mt-2 border-t border-[#aeb3bc] pt-2">
+                  <h2 className="mt-2 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
                     <span
                       className={playing ? 'block text-[#1763fd]' : 'block'}
                     >
