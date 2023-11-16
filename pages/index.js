@@ -280,6 +280,12 @@ export default function Home() {
                       href="https://ultrasoundapps.com"
                       text="Crypto apps homepage"
                     />
+                    <br />
+                    Saylor Memes<br></br>
+                    <ProjectLink
+                      href="https://saylormemes.com"
+                      text="Saylor meme collection"
+                    />
                   </p>
                 </div>
 
