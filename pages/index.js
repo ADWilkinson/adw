@@ -241,7 +241,7 @@ export default function Home() {
                   <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl">
                     Galleon DAO<br></br>
                     <ProjectLink
-                      href="https://twitter.com/galleondao"
+                      href="https://github.com/GalleonDAO"
                       text="DeFi organisation (founder)"
                     />
                     <br />
@@ -253,7 +253,7 @@ export default function Home() {
                     <br />
                     Royal Fortune Studios<br></br>
                     <ProjectLink
-                      href="https://twitter.com/RoyalFortune0x"
+                      href="https://royalfortune.studio"
                       text="Music NFTs"
                     />
                     <br />
