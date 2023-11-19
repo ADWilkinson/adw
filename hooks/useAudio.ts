@@ -1,25 +1,38 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-const useAudio = (url) => {
-  const [audio, setAudio] = useState(null)
-  const [playing, setPlaying] = useState(false)
-  const toggle = () => setPlaying(!playing)
+type UseAudioReturnType = [boolean, () => void];
+
+const useAudio = (url: string): UseAudioReturnType => {
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(new Audio(url));
+  const [playing, setPlaying] = useState<boolean>(false);
+
+  const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
-    let a = new Audio(url)
-    audio?.addEventListener('ended', () => setPlaying(false))
-    setAudio(a)
+    const currentAudio = audio;
+    
+    const handleEnded = () => setPlaying(false);
+    currentAudio?.addEventListener('ended', handleEnded);
+
     return () => {
-      audio?.removeEventListener('ended', () => setPlaying(false))
-    }
-  }, [])
+      currentAudio?.removeEventListener('ended', handleEnded);
+    };
+  }, [audio]);
 
   useEffect(() => {
-    if (audio === null) return
-    playing ? audio.play() : audio.pause()
-  }, [playing])
+    if (audio === null) return;
+    playing ? audio.play().catch(e => console.error('Error playing audio:', e)) : audio.pause();
+  }, [playing, audio]);
 
-  return [playing, toggle]
-}
+  useEffect(() => {
+    const newAudio = new Audio(url);
+    setAudio(newAudio);
+    return () => {
+      newAudio.pause();
+    }
+  }, [url]);
 
-export default useAudio
+  return [playing, toggle];
+};
+
+export default useAudio;
