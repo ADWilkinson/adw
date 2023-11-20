@@ -6,13 +6,13 @@ import useAudio from '../hooks/useAudio'
 
 const linksData = [
   {
-    href: 'https://galleon.ventures',
+    href: 'https://galleonlabs.io',
     imgSrc: './logo-profile.png',
     title: 'Galleon',
-    description: 'Tech & crypto consulting',
+    description: 'Crypto-native development studio.',
   },
   {
-    href: 'https://blackflag.ventures',
+    href: 'https://galleonlabs.io',
     imgSrc: './blackflag.png',
     title: 'Black Flag Ventures',
     description: 'Liquid & angel investing',
@@ -119,29 +119,27 @@ const socialLinksData = [
 ]
 
 const CardLink = memo(({ href, imgSrc, title, description }) => (
-  // <Link href={href} target="_blank">
-  <div className="pt-0">
-    {/* <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 pb-6 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]"> */}
-    <div className="pt-6">
-      <div>
-        <span className="inline-flex items-center justify-center">
-          <div className="mx-auto w-auto justify-center text-center">
-            <img
-              className="mx-auto inline-flex  h-24 w-auto justify-center rounded-sm border border-[#aeb3bc] bg-gray-50  text-center shadow-[3px_3px_0px_#153c8a]  ring-black grayscale hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a] sm:h-24"
-              src={imgSrc}
-              alt=""
-            />
-          </div>
-        </span>
+  <Link href={href} target="_blank">
+    <div className="pt-0">
+      <div className="pt-6">
+        <div>
+          <span className="inline-flex items-center justify-center">
+            <div className="mx-auto w-auto justify-center text-center">
+              <img
+                className="mx-auto inline-flex  h-24 w-auto justify-center rounded-sm border border-[#aeb3bc] bg-gray-50  text-center shadow-[3px_3px_0px_#153c8a]  ring-black grayscale hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a] sm:h-24"
+                src={imgSrc}
+                alt=""
+              />
+            </div>
+          </span>
+        </div>
+        <h3 className="text-md mt-4 font-semibold tracking-tight text-gray-700">
+          {title}
+        </h3>
+        <p className="mt-1 text-sm text-gray-600">{description}</p>
       </div>
-      <h3 className="mt-4 text-md font-semibold tracking-tight text-gray-700">
-        {title}
-      </h3>
-      <p className="mt-1 text-sm text-gray-600">{description}</p>
     </div>
-  </div>
-  // </div>
-  // </Link>
+  </Link>
 ))
 
 const IconLink = memo(({ href, svgIcon, title }) => (
@@ -241,7 +239,7 @@ export default function Home() {
                   <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl">
                     Galleon DAO<br></br>
                     <ProjectLink
-                      href="https://github.com/GalleonDAO"
+                      href="https://galleonlabs.io/dao"
                       text="DeFi organisation (founder)"
                     />
                     <br />
