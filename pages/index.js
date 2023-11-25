@@ -148,7 +148,7 @@ const IconLink = memo(({ href, svgIcon, title }) => (
       <div className="flow-root rounded-sm border border-[#aeb3bc] bg-gray-50 px-6 py-1.5 shadow-[3px_3px_0px_#153c8a] hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a]">
         <div className="flex">
           {svgIcon}
-          <h3 className="ml-2 text-md font-semibold tracking-tight text-gray-700">
+          <h3 className="text-md ml-2 font-semibold tracking-tight text-gray-700">
             {title}
           </h3>
         </div>
@@ -159,11 +159,7 @@ const IconLink = memo(({ href, svgIcon, title }) => (
 
 const ProjectLink = memo(({ href, text }) => {
   return (
-    <a
-      className="text-[#1763fd]  text-sm ml-2"
-      target="_blank"
-      href={href}
-    >
+    <a className="ml-2  text-sm text-[#1763fd]" target="_blank" href={href}>
       &gt; {text}
     </a>
   )
@@ -191,7 +187,7 @@ export default function Home() {
                 <h1 className="text-left text-lg font-extrabold text-gray-700 ">
                   <span className="block">contact</span>
                 </h1>
-                <p className="text-md mx-auto  mt-2 text-left text-gray-600 sm:max-w-3xl">
+                <p className="text-md mx-auto  mt-2  pb-2 text-left text-gray-600 sm:max-w-3xl">
                   <a
                     className="text-[#1763fd]"
                     href="mailto:hello@andrewwilkinson.me"
@@ -199,6 +195,7 @@ export default function Home() {
                     hello@andrewwilkinson.me
                   </a>
                 </p>
+    
                 <h2 className="mt-2 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
                   <span className="block">work</span>
                 </h2>
@@ -230,61 +227,6 @@ export default function Home() {
                       />
                     ))}
                   </div>
-                </div>
-
-                <div className="pt-4">
-                  <h2 className="mt-2 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
-                    <span className="block">projects</span>
-                  </h2>
-                  <p className="text-md mx-auto mt-2 text-left text-gray-600 sm:max-w-3xl">
-                    Galleon DAO<br></br>
-                    <ProjectLink
-                      href="https://galleonlabs.io/dao"
-                      text="DeFi organisation (founder)"
-                    />
-                    <br />
-                    Cursed Pirates<br></br>
-                    <ProjectLink
-                      href="https://twitter.com/cursedpirates"
-                      text="Avatar NFT collection"
-                    />
-                    <br />
-                    Royal Fortune Studios<br></br>
-                    <ProjectLink
-                      href="https://royalfortune.studio"
-                      text="Music NFTs"
-                    />
-                    <br />
-                    ChordCraft<br></br>
-                    <ProjectLink
-                      href="https://github.com/ADWilkinson/chordcraft"
-                      text="AI chord progressions"
-                    />
-                    <br />
-                    TradingView Scripts<br></br>
-                    <ProjectLink
-                      href="https://www.tradingview.com/u/Tradespot/#published-scripts"
-                      text="Free chart indicators"
-                    />
-                    <br />
-                    Cursed Fund<br></br>
-                    <ProjectLink
-                      href="https://github.com/ADWilkinson/cursed-fund"
-                      text="Web3 trading experiments"
-                    />
-                    <br />
-                    Ultra Sound Apps<br></br>
-                    <ProjectLink
-                      href="https://ultrasoundapps.com"
-                      text="Crypto apps homepage"
-                    />
-                    <br />
-                    Saylor Memes<br></br>
-                    <ProjectLink
-                      href="https://saylormemes.com"
-                      text="Saylor meme collection"
-                    />
-                  </p>
                 </div>
 
                 <div className={playing ? 'animate-pulse pt-4' : 'pt-4'}>
