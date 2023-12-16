@@ -11,12 +11,7 @@ const linksData = [
     title: 'Galleon',
     description: 'Crypto-native development studio.',
   },
-  {
-    href: 'https://galleonlabs.io',
-    imgSrc: './blackflag.png',
-    title: 'Black Flag Ventures',
-    description: 'Liquid & angel investing',
-  },
+
 ]
 
 const socialLinksData = [
@@ -121,22 +116,26 @@ const socialLinksData = [
 const CardLink = memo(({ href, imgSrc, title, description }) => (
   <Link href={href} target="_blank">
     <div className="pt-0">
-      <div className="pt-6">
+      <div className=" pt-6">
         <div>
-          <span className="inline-flex items-center justify-center">
-            <div className="mx-auto w-auto justify-center text-center">
+          <span className="">
+            <div className="flex">
               <img
-                className="mx-auto inline-flex  h-24 w-auto justify-center rounded-sm border border-[#aeb3bc] bg-gray-50  text-center shadow-[3px_3px_0px_#153c8a]  ring-black grayscale hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a] sm:h-24"
+                className=" h-24 w-auto rounded-sm border border-[#aeb3bc] bg-gray-50   shadow-[3px_3px_0px_#153c8a]  ring-black grayscale hover:border-[#1763fd] hover:bg-[#1763fd1a] hover:shadow-[1px_1px_0px_#153c8a] sm:h-24"
                 src={imgSrc}
                 alt=""
               />
+              <div className="ml-8">
+                <h3 className="text-md mt-6 text-left font-semibold tracking-tight text-gray-700">
+                  {title}
+                </h3>
+                <p className="mt-1 text-left text-sm text-gray-600">
+                  {description}
+                </p>
+              </div>
             </div>
           </span>
         </div>
-        <h3 className="text-md mt-4 font-semibold tracking-tight text-gray-700">
-          {title}
-        </h3>
-        <p className="mt-1 text-sm text-gray-600">{description}</p>
       </div>
     </div>
   </Link>
@@ -156,14 +155,6 @@ const IconLink = memo(({ href, svgIcon, title }) => (
     </div>
   </Link>
 ))
-
-const ProjectLink = memo(({ href, text }) => {
-  return (
-    <a className="ml-2  text-sm text-[#1763fd]" target="_blank" href={href}>
-      &gt; {text}
-    </a>
-  )
-})
 
 export default function Home() {
   const [playing, toggle] = useAudio('/wombat.mp3')
@@ -200,7 +191,7 @@ export default function Home() {
                   <span className="block">work</span>
                 </h2>
                 <div className="">
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-2">
+                  <div className="pb-2">
                     {linksData.map((link, index) => (
                       <CardLink
                         key={index}
