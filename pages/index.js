@@ -11,7 +11,6 @@ const linksData = [
     title: 'Galleon',
     description: 'Crypto-native development studio.',
   },
-
 ]
 
 const socialLinksData = [
@@ -30,7 +29,7 @@ const socialLinksData = [
     ),
   },
   {
-    href: 'https://twitter.com/andrew_eth',
+    href: 'https://twitter.com/davyjones0x',
     title: 'Twitter',
     svgIcon: (
       <svg
@@ -186,7 +185,7 @@ export default function Home() {
                     hello@andrewwilkinson.me
                   </a>
                 </p>
-    
+
                 <h2 className="mt-2 border-t border-[#aeb3bc] pt-2 text-left text-lg font-extrabold text-gray-700">
                   <span className="block">work</span>
                 </h2>
