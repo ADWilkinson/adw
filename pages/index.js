@@ -171,7 +171,17 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>Andrew Wilkinson - Software Engineer</title>
+        <meta name="description" content="Andrew Wilkinson's personal website. Software engineer specializing in Web3 and blockchain technologies." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Andrew Wilkinson - Software Engineer" />
+        <meta property="og:description" content="Personal website of Andrew Wilkinson, software engineer specializing in Web3 and blockchain technologies." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://andrewwilkinson.io" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@davyjones0x" />
         <link rel="icon" href="/davy.png" />
+        <link rel="canonical" href="https://andrewwilkinson.io" />
       </Head>
       <div className="pb-12 sm:pb-4 ">
         <Container>
@@ -231,22 +241,23 @@ export default function Home() {
                       vibe
                     </span>
                   </h2>
-                  <p
-                    onClick={toggleMusic}
-                    className=" text-md mx-auto mt-1 cursor-pointer text-left text-gray-600 hover:text-[#1763fd]"
-                  >
-                    Adhesive Wombat - 8 Bit Adventure
+                  <div className="flex items-center">
                     <button
-                      className={
-                        playing ? 'mt-2 animate-bounce md:mt-0' : 'mt-2 md:mt-0'
-                      }
+                      onClick={toggleMusic}
+                      className="text-md mx-auto mt-1 flex cursor-pointer items-center text-left text-gray-600 hover:text-[#1763fd] focus:outline-none focus:ring-2 focus:ring-[#1763fd] focus:ring-offset-2"
+                      aria-label={playing ? 'Pause music' : 'Play music'}
+                      aria-pressed={playing}
                     >
+                      <span>Adhesive Wombat - 8 Bit Adventure</span>
                       <img
                         src={playing ? '/sound_on.png' : '/sound_off.png'}
-                        className=" ml-1.5 mr-4 inline-flex h-5 w-5 -translate-y-0.5   grayscale "
+                        className={`ml-1.5 mr-4 inline-flex h-5 w-5 -translate-y-0.5 grayscale ${
+                          playing ? 'animate-bounce' : ''
+                        }`}
+                        alt={playing ? 'Sound on' : 'Sound off'}
                       />
                     </button>
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>

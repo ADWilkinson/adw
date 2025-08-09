@@ -1,40 +1,70 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 
 type UseAudioReturnType = [boolean, () => void]
 
 const useAudio = (url: string): UseAudioReturnType => {
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(
-    typeof Audio !== 'undefined' && new Audio(url)
-  )
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   const [playing, setPlaying] = useState<boolean>(false)
 
-  const toggle = () => setPlaying(!playing)
+  const toggle = useCallback(() => {
+    setPlaying((prev) => !prev)
+  }, [])
 
   useEffect(() => {
-    const currentAudio = audio
+    if (typeof Audio === 'undefined') return
 
+    if (!audioRef.current) {
+      audioRef.current = new Audio(url)
+      audioRef.current.preload = 'auto'
+    } else if (audioRef.current.src !== url) {
+      audioRef.current.pause()
+      audioRef.current.src = url
+      audioRef.current.load()
+    }
+
+    const audio = audioRef.current
+    
     const handleEnded = () => setPlaying(false)
-    currentAudio?.addEventListener('ended', handleEnded)
+    const handleError = (e: Event) => {
+      console.error('Audio playback error:', e)
+      setPlaying(false)
+    }
+    
+    audio.addEventListener('ended', handleEnded)
+    audio.addEventListener('error', handleError)
 
     return () => {
-      currentAudio?.removeEventListener('ended', handleEnded)
+      audio.removeEventListener('ended', handleEnded)
+      audio.removeEventListener('error', handleError)
     }
-  }, [audio])
+  }, [url])
 
   useEffect(() => {
-    if (audio === null) return
-    playing
-      ? audio.play().catch((e) => console.error('Error playing audio:', e))
-      : audio.pause()
+    const audio = audioRef.current
+    if (!audio) return
+
+    if (playing) {
+      const playPromise = audio.play()
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.error('Error playing audio:', error)
+          setPlaying(false)
+        })
+      }
+    } else {
+      audio.pause()
+    }
   }, [playing])
 
   useEffect(() => {
-    const newAudio = new Audio(url)
-    setAudio(newAudio)
     return () => {
-      newAudio.pause()
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current.src = ''
+        audioRef.current = null
+      }
     }
-  }, [url])
+  }, [])
 
   return [playing, toggle]
 }
